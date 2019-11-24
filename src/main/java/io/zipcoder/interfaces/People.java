@@ -5,13 +5,19 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<E extends Person> implements Iterable<E>{
-    List<Person> personList = new ArrayList<Person>();
+public abstract class People<E extends Person> implements Iterable<E>{
 
-    public void add(Person person){
+
+    private List<E> personList;
+
+    public People(){
+        this.personList = new ArrayList<E>();
+    }
+
+    public void add(E person){
         personList.add(person);
     }
-    public Person findById(long id){
+    public E findById(long id){
         Person foundPerson = null;
         for (Person p : personList) {
             if (p.id == id){
@@ -19,7 +25,7 @@ public class People<E extends Person> implements Iterable<E>{
             }
         }
 
-        return foundPerson;
+        return (E)foundPerson;
 
     }
     public Boolean contains(Person person){
@@ -37,13 +43,18 @@ public class People<E extends Person> implements Iterable<E>{
     public Integer count(){
         return personList.size();
     }
-    public Person[] toArray(){
-        Person[] people = new Person[personList.size()];
-        for (int i = 0; i < people.length; i++){
-            people[i] = personList.get(i);
-        }
-        return people;
-    }
+
+    public abstract E[] toArray();
+   // {
+//        Person[] people = new Person[personList.size()];
+//        for (int i = 0; i < people.length; i++){
+//            people[i] = personList.get(i);
+//        }
+//        return people;
+  //  }
+   public List<E> getPersonList() {
+       return personList;
+   }
 
     @Override
     public Iterator iterator() {

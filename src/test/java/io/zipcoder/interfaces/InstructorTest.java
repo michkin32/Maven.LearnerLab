@@ -9,7 +9,7 @@ public class InstructorTest {
     @Test
     public void testImplementation() {
         Instructor instructor = new Instructor(90l,"Joe");
-        Assert.assertTrue(instructor instanceof Learner);
+        Assert.assertTrue(instructor instanceof Teacher);
 
     }
     @Test
