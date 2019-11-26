@@ -8,7 +8,7 @@ public final class Instructors extends People<Instructor> {
         super.add(new Instructor(19l, "Roberto Dedeus"));
         super.add(new Instructor(11l, "Chris Nobles"));
         super.add(new Instructor(10l, "Froilan Miranda"));
-        super.add(new Instructor(10l, "L. Dolio Durant"));
+        super.add(new Instructor(12l, "L. Dolio Durant"));
 
 
     }
@@ -17,7 +17,7 @@ public final class Instructors extends People<Instructor> {
     public Instructor[] toArray() {
         Instructor[] newArray = new Instructor[this.getPersonList().size()];
 
-        for (int i = 0; i < newArray.length - 1; i++) {
+        for (int i = 0; i < newArray.length; i++) {
             newArray[i] = this.getPersonList().get(i);
 
         }

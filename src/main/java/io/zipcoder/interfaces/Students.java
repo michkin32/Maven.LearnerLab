@@ -22,7 +22,7 @@ public final class Students extends People<Student> {
     public Student[] toArray() {
         Student[] newArray = new Student[this.getPersonList().size()];
 
-        for (int i = 0; i < newArray.length - 1; i++) {
+        for (int i = 0; i < newArray.length; i++) {
             newArray[i] = this.getPersonList().get(i);
 
         }

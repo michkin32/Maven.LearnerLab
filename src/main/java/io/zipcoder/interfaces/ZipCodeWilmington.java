@@ -7,6 +7,10 @@ public class ZipCodeWilmington {
     Students students = Students.getInstance();
     Instructors instructors = Instructors.getInstance();
 
+    public ZipCodeWilmington(){
+
+    }
+
     public void hostLecture(Teacher teacher, double numberOfHours){
         teacher.lecture( students.toArray(), numberOfHours);
     }

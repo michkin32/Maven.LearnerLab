@@ -45,19 +45,13 @@ public abstract class People<E extends Person> implements Iterable<E>{
     }
 
     public abstract E[] toArray();
-   // {
-//        Person[] people = new Person[personList.size()];
-//        for (int i = 0; i < people.length; i++){
-//            people[i] = personList.get(i);
-//        }
-//        return people;
-  //  }
+
    public List<E> getPersonList() {
        return personList;
    }
 
     @Override
     public Iterator iterator() {
-        return (Iterator<E>)personList.iterator();
+        return personList.iterator();
     }
 }

@@ -5,12 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PeopleTest {
-
+public class EducatorTest {
     @Test
     public void testImplementation() {
-        People students = Students.getInstance();
-        Assert.assertTrue(students instanceof Iterable);
+
+        Assert.assertTrue(Educator.ChrisNobles instanceof Teacher);
 
     }
+
 }
